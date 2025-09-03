@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo Didático de HTML</title>
+    <style>
+        /*
+        * A tag <style> define CSS interno para o documento.
+        * Aqui, definimos estilos para alinhar texto em diferentes elementos e formatar classes.
+        */
+        .center {
+            text-align: center;
+        }
+
+        .h1-center {
+            text-align: center;
+        }
+
+        .h2-left {
+            text-align: left;
+        }
+
+        .h3-right {
+            text-align: right;
+        }
+
+        /* Estilos para o parágrafo formatado */
+        .paragraph-formatted {
+            text-decoration: underline;
+        }
+
+        /* Estilos para o texto riscado */
+        .strikethrough-text {
+            text-decoration: line-through;
+        }
+
+        /* Estilos para o texto justificado */
+        .justify-text {
+            text-align: justify;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- A tag <body> contém todo o conteúdo visível da página. -->
+
+    <!-- A tag <header> é usada para agrupar o conteúdo introdutório ou de navegação. -->
+    <header>
+        <!-- Títulos de diferentes níveis (<h1> a <h6>) com alinhamentos variados. -->
+        <h1 class="h1-center">Título principal (H1) - centralizado</h1>
+        <h2 class="h2-left">Subtítulo (H2) - alinhado à esquerda</h2>
+        <h3 class="h3-right">Seção (H3) - alinhado à direita</h3>
+        <h4>Subseção (H4)</h4>
+        <h5>Detalhe (H5)</h5>
+        <h6>Nota (H6)</h6>
+    </header>
+
+    <!-- A tag <nav> define um bloco de navegação. -->
+    <nav>
+        <!--
+        * O parágrafo agrupa links de navegação.
+        * A tag <a> cria um hyperlink. O atributo href aponta para o destino.
+        * Neste caso, usamos # (âncoras) para links internos para seções da própria página.
+        -->
+        <p>
+            <a href="#posts">Posts</a> |
+            <a href="#lateral">Lateral</a> |
+            <a href="#rodape">Rodapé</a>
+        </p>
+    </nav>
+
+    <!-- A tag <section> define uma seção temática do conteúdo. -->
+    <section id="posts">
+        <!-- A tag <article> representa um conteúdo autônomo e independente que pode ser distribuído. -->
+        <article class="post">
+            <!-- Outro <header> para a seção de posts. -->
+            <header>
+                <h2>Meu Blog – Primeiro Post</h2>
+            </header>
+
+            <!--
+            * <strong> é usado para negrito.
+            * <em> é usado para itálico.
+            * Usamos classes para aplicar sublinhado e riscado via CSS.
+            * <sub> e <sup> são usados para subscrito e sobrescrito, respectivamente.
+            -->
+            <p>
+                Este é um parágrafo com texto em <strong>negrito</strong>, <em>itálico</em>, <span class="paragraph-formatted">sublinhado</span> e <span class="strikethrough-text">riscado</span>, além de exemplos de <sub>subscrito</sub> e <sup>sobrescrito</sup>.
+            </p>
+
+            <!--
+            * Este parágrafo demonstra o uso de CSS inline.
+            * A cor é definida com a propriedade color e o tamanho da fonte com font-size.
+            -->
+            <p style="color: blue; font-size: 1.2em;">Exemplo de texto estilizado (substituindo a tag &lt;font&gt; obsoleta).</p>
+
+            <!--
+            * A tag <div> é um contêiner genérico para agrupar elementos.
+            * A classe .center alinha o texto ao centro, usando a propriedade text-align no CSS.
+            -->
+            <div class="center">
+                <p>Este texto está centralizado (substituindo &lt;center&gt;).</p>
+            </div>
+
+            <!--
+            * Parágrafo com alinhamento justificado.
+            * A tag <br> força uma quebra de linha.
+            -->
+            <p class="justify-text">
+                Parágrafo justificado para demonstrar alinhamento. Este é um texto longo que se estende por várias linhas para ilustrar a formatação justificada, onde o texto é alinhado uniformemente em ambas as margens.
+                <br>
+                Esta é a linha seguinte após o &lt;br&gt;.
+            </p>
+        </article>
+    </section>
+
+    <!-- A tag <aside> define o conteúdo que é relacionado ao conteúdo principal, mas não é parte essencial dele. -->
+    <aside id="lateral">
+        <h3>Conteúdo Relacionado</h3>
+        <p>Links, anúncios, ou notas que não fazem parte do fluxo principal do artigo.</p>
+    </aside>
+
+    <!-- A tag <footer> representa o rodapé da página ou da seção. -->
+    <footer id="rodape" class="center">
+        <!-- O parágrafo no rodapé geralmente contém informações de direitos autorais ou contato. -->
+        <p>© 2025 – Exemplo didático de HTML da Aula</p>
+    </footer>
+
+</body>
+
+</html>
